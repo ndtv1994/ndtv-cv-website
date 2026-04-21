@@ -11,7 +11,6 @@
         .video-container { display: none; }
         .active-video { display: block; }
         
-        /* Hiệu ứng lướt từ trái sang phải */
         .reveal { 
             opacity: 0; 
             transform: translateX(-60px); 
@@ -24,7 +23,6 @@
         .delay-100 { transition-delay: 100ms; }
         .delay-200 { transition-delay: 200ms; }
 
-        /* Custom Colors based on Reference Image */
         .bg-dark-depth { background-color: #0a0a0a; }
         .text-neon { color: #d4ff00; }
         .bg-neon { background-color: #d4ff00; }
@@ -34,28 +32,23 @@
 <body class="bg-white text-gray-800 font-sans">
 
     <section class="relative w-full h-[90vh] min-h-[700px] bg-dark-depth text-white flex items-center border-b-[6px] border-[#d4ff00] overflow-hidden">
-        
         <div class="absolute top-1/2 left-1/3 -translate-y-1/2 w-[600px] h-[600px] bg-zinc-800/20 rounded-full blur-3xl -z-10"></div>
 
         <div class="max-w-7xl mx-auto w-full px-6 grid grid-cols-1 lg:grid-cols-2 relative z-20">
             <div class="reveal flex flex-col justify-center pt-10 pb-40 lg:pb-0 z-30">
-                
                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-[5.5rem] font-black mb-6 leading-[1.1] tracking-tight text-white drop-shadow-md">
                     <span class="whitespace-nowrap">Nguyễn Đặng</span><br>
                     <span class="whitespace-nowrap">Tiến Vũ</span>
                 </h1>
-                
                 <div class="mb-12">
                     <p class="text-lg md:text-xl font-light text-zinc-400 leading-relaxed max-w-lg">
                         Video Editor / Videographer / Photographer / Junior AI tools
                     </p>
                 </div>
-
                 <div class="flex flex-wrap items-center gap-8">
                     <a href="#contact" class="bg-neon hover-bg-neon text-black px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:-translate-y-1 inline-flex items-center gap-3 shadow-lg shadow-[#d4ff00]/20">
                         Contact <i class="fas fa-arrow-right"></i>
                     </a>
-                    
                     <a href="#projects" class="flex items-center gap-3 cursor-pointer group transition-colors">
                         <div class="w-12 h-12 rounded-full border border-zinc-600 flex items-center justify-center group-hover:border-neon group-hover:text-neon transition-colors">
                             <i class="fas fa-play text-sm"></i>
@@ -185,37 +178,92 @@
     <section id="projects" class="bg-white py-24 md:py-32 px-6">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-black mb-24 text-center uppercase tracking-wide reveal">Work History & Projects</h2>
-            
             <div class="space-y-24">
                 <div class="reveal border-l-8 border-[#0a0a0a] pl-8">
-                    <div class="flex flex-col md:flex-row gap-6 items-baseline mb-10">
-                        <span class="text-4xl font-black text-slate-300 tracking-tighter">2024 - 2026</span>
+                    <div class="flex flex-col md:flex-row gap-6 items-baseline mb-6">
+                        <span class="text-4xl font-black text-slate-300 tracking-tighter">10/2024 - 03/2026</span>
                         <h3 class="text-3xl md:text-4xl font-bold text-slate-800">HVA GROUP</h3>
                     </div>
+                    <p class="text-zinc-500 font-bold mb-6 uppercase tracking-widest text-sm">Video Editor / Videographer / Photographer</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <button onclick="toggleVideo('hva-1')" class="text-left p-6 bg-slate-50 hover:bg-[#0a0a0a] hover:text-neon rounded-2xl transition-all duration-300 font-bold shadow-sm border border-slate-200">
-                            <i class="fas fa-play-circle mr-3 text-xl"></i> Dự án PODCAST FUNDGO LOW
+                            <i class="fas fa-play-circle mr-3 text-xl"></i> Podcast Fundgo Low
                         </button>
-                        <button onclick="toggleVideo('hva-2')" class="text-left p-6 bg-slate-50 hover:bg-[#0a0a0a] hover:text-neon rounded-2xl transition-all duration-300 font-bold shadow-sm border border-slate-200">
-                            <i class="fas fa-play-circle mr-3 text-xl"></i> Khai trương FUNDGO Đà Nẵng
+                        <button class="text-left p-6 bg-slate-50 hover:bg-[#0a0a0a] hover:text-neon rounded-2xl transition-all duration-300 font-bold shadow-sm border border-slate-200">
+                            <i class="fas fa-play-circle mr-3 text-xl"></i> Khai trương Fundgo Đà Nẵng
+                        </button>
+                        <button class="text-left p-6 bg-slate-50 hover:bg-[#0a0a0a] hover:text-neon rounded-2xl transition-all duration-300 font-bold shadow-sm border border-slate-200">
+                            <i class="fas fa-play-circle mr-3 text-xl"></i> Đại hội Cổ đông HVA 2025
                         </button>
                     </div>
                     <div id="hva-1" class="video-container mt-10 aspect-video bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border-4 border-neon">
-                        <iframe src="https://drive.google.com/file/d/FILE_ID_PLACEHOLDER/preview" width="100%" height="100%" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1XW_placeholder/preview" width="100%" height="100%" allow="autoplay"></iframe>
                     </div>
                 </div>
 
                 <div class="reveal border-l-8 border-[#d4ff00] pl-8 delay-100">
-                    <div class="flex flex-col md:flex-row gap-6 items-baseline mb-10">
-                        <span class="text-4xl font-black text-slate-300 tracking-tighter">2023 - 2024</span>
+                    <div class="flex flex-col md:flex-row gap-6 items-baseline mb-6">
+                        <span class="text-4xl font-black text-slate-300 tracking-tighter">10/2023 - 10/2024</span>
                         <h3 class="text-3xl md:text-4xl font-bold text-slate-800">MEKONG PRO M&M</h3>
                     </div>
+                    <p class="text-zinc-500 font-bold mb-6 uppercase tracking-widest text-sm">Video Editor / Designer</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <button class="text-left p-6 bg-slate-50 hover:bg-[#d4ff00] hover:text-black rounded-2xl transition-all duration-300 font-bold shadow-sm border border-slate-200">
                             <i class="fas fa-play-circle mr-3 text-xl"></i> TVC Nissan Cần Thơ
                         </button>
                         <button class="text-left p-6 bg-slate-50 hover:bg-[#d4ff00] hover:text-black rounded-2xl transition-all duration-300 font-bold shadow-sm border border-slate-200">
-                            <i class="fas fa-play-circle mr-3 text-xl"></i> Khai trương Carpla Cần Thơ
+                            <i class="fas fa-play-circle mr-3 text-xl"></i> 10 năm Bệnh viện ĐKTP Cần Thơ
+                        </button>
+                        <button class="text-left p-6 bg-slate-50 hover:bg-[#d4ff00] hover:text-black rounded-2xl transition-all duration-300 font-bold shadow-sm border border-slate-200">
+                            <i class="fas fa-play-circle mr-3 text-xl"></i> Tuyển dụng VinMec Cần Thơ
+                        </button>
+                    </div>
+                </div>
+
+                <div class="reveal border-l-8 border-[#0a0a0a] pl-8">
+                    <div class="flex flex-col md:flex-row gap-6 items-baseline mb-6">
+                        <span class="text-4xl font-black text-slate-300 tracking-tighter">05/2022 - 01/2023</span>
+                        <h3 class="text-3xl md:text-4xl font-bold text-slate-800">MADIAD</h3>
+                    </div>
+                    <p class="text-zinc-500 font-bold mb-6 uppercase tracking-widest text-sm">Video Editor / Videographer / Photographer</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <button class="text-left p-6 bg-slate-50 hover:bg-[#0a0a0a] hover:text-neon rounded-2xl transition-all duration-300 font-bold shadow-sm border border-slate-200">
+                            <i class="fas fa-play-circle mr-3 text-xl"></i> Dự án Hesman Legend
+                        </button>
+                        <button class="text-left p-6 bg-slate-50 hover:bg-[#0a0a0a] hover:text-neon rounded-2xl transition-all duration-300 font-bold shadow-sm border border-slate-200">
+                            <i class="fas fa-play-circle mr-3 text-xl"></i> Techfest Cần Thơ 2022
+                        </button>
+                    </div>
+                </div>
+
+                <div class="reveal border-l-8 border-[#d4ff00] pl-8">
+                    <div class="flex flex-col md:flex-row gap-6 items-baseline mb-6">
+                        <span class="text-4xl font-black text-slate-300 tracking-tighter">05/2021 - 08/2021</span>
+                        <h3 class="text-3xl md:text-4xl font-bold text-slate-800">CABIN ENTERTAINMENT</h3>
+                    </div>
+                    <p class="text-zinc-500 font-bold mb-6 uppercase tracking-widest text-sm">Video Editor / Videographer</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <button class="text-left p-6 bg-slate-50 hover:bg-[#d4ff00] hover:text-black rounded-2xl transition-all duration-300 font-bold shadow-sm border border-slate-200">
+                            <i class="fas fa-play-circle mr-3 text-xl"></i> Podcast Bác sĩ Nhà Đan
+                        </button>
+                        <button class="text-left p-6 bg-slate-50 hover:bg-[#d4ff00] hover:text-black rounded-2xl transition-all duration-300 font-bold shadow-sm border border-slate-200">
+                            <i class="fas fa-play-circle mr-3 text-xl"></i> Gió mùa TV
+                        </button>
+                    </div>
+                </div>
+
+                <div class="reveal border-l-8 border-[#0a0a0a] pl-8">
+                    <div class="flex flex-col md:flex-row gap-6 items-baseline mb-6">
+                        <span class="text-4xl font-black text-slate-300 tracking-tighter">03/2020 - 05/2021</span>
+                        <h3 class="text-3xl md:text-4xl font-bold text-slate-800">BIGSUN MEDIA</h3>
+                    </div>
+                    <p class="text-zinc-500 font-bold mb-6 uppercase tracking-widest text-sm">Video Editor</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <button class="text-left p-6 bg-slate-50 hover:bg-[#0a0a0a] hover:text-neon rounded-2xl transition-all duration-300 font-bold shadow-sm border border-slate-200">
+                            <i class="fas fa-play-circle mr-3 text-xl"></i> Lễ hội Ánh sáng TPCT
+                        </button>
+                        <button class="text-left p-6 bg-slate-50 hover:bg-[#0a0a0a] hover:text-neon rounded-2xl transition-all duration-300 font-bold shadow-sm border border-slate-200">
+                            <i class="fas fa-play-circle mr-3 text-xl"></i> TVC Body Lab
                         </button>
                     </div>
                 </div>
@@ -232,14 +280,14 @@
                         <img src="./GOOGLE%20DRIVE.png" alt="QR Xem sản phẩm Media" class="w-48 h-48 object-contain rounded-xl">
                     </div>
                     <br>
-                    <a href="#" class="text-2xl font-bold underline decoration-4 underline-offset-8 hover:text-neon transition-all">Xem sản phẩm Media</a>
+                    <a href="https://drive.google.com/drive/folders/1-7JGEk6v784UZ4U8QzVNiNHPeM88uYG4?usp=drive_link" target="_blank" class="text-2xl font-bold underline decoration-4 underline-offset-8 hover:text-neon transition-all">Xem sản phẩm Media</a>
                 </div>
                 <div class="reveal delay-200">
                     <div class="bg-white p-6 rounded-3xl inline-block mb-8 shadow-2xl">
                         <img src="./Web.png" alt="QR My AI Tool Web" class="w-48 h-48 object-contain rounded-xl">
                     </div>
                     <br>
-                    <a href="#" class="text-2xl font-bold underline decoration-4 underline-offset-8 hover:text-neon transition-all">My AI Tool Web</a>
+                    <a href="https://onelink-ndtv.vercel.app" target="_blank" class="text-2xl font-bold underline decoration-4 underline-offset-8 hover:text-neon transition-all">My AI Tool Web</a>
                 </div>
             </div>
         </div>
@@ -280,20 +328,17 @@
                 }
             });
         }
-
         function reveal() {
             var reveals = document.querySelectorAll('.reveal');
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var revealTop = reveals[i].getBoundingClientRect().top;
                 var revealPoint = 100; 
-                
                 if (revealTop < windowHeight - revealPoint) {
                     reveals[i].classList.add('active');
                 }
             }
         }
-        
         window.addEventListener('scroll', reveal);
         setTimeout(reveal, 100); 
     </script>
