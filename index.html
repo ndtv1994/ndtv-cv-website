@@ -11,6 +11,7 @@
         .video-container { display: none; }
         .active-video { display: block; }
         
+        /* Hiệu ứng lướt từ trái sang phải */
         .reveal { 
             opacity: 0; 
             transform: translateX(-60px); 
@@ -22,6 +23,12 @@
         }
         .delay-100 { transition-delay: 100ms; }
         .delay-200 { transition-delay: 200ms; }
+
+        /* Hiệu ứng thanh tiến trình (Progress Bar) */
+        .progress-fill {
+            width: 0%;
+            transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
 
         .bg-dark-depth { background-color: #0a0a0a; }
         .text-neon { color: #d4ff00; }
@@ -118,43 +125,52 @@
                     </div>
                 </div>
             </div>
+            
             <div class="reveal delay-100">
                 <h2 class="text-3xl md:text-4xl font-black mb-12 flex items-center gap-4">
                     <span class="w-12 h-2 bg-neon"></span> TIẾNG ANH
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
-                    <div>
-                        <div class="flex justify-between mb-3 font-bold uppercase text-sm tracking-widest text-slate-500">
-                            <span>Listening</span>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-10">
+                    
+                    <div class="space-y-10">
+                        <div>
+                            <div class="flex justify-between mb-3 font-bold uppercase text-sm tracking-widest text-slate-500">
+                                <span>Listening</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-4 rounded-full overflow-hidden shadow-inner">
+                                <div class="progress-fill h-full bg-[#d4ff00]" data-width="60%"></div>
+                            </div>
                         </div>
-                        <div class="w-full bg-slate-100 h-4 rounded-full overflow-hidden">
-                            <div class="bg-slate-900 h-full w-[60%]"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-3 font-bold uppercase text-sm tracking-widest text-slate-500">
-                            <span>Speaking</span>
-                        </div>
-                        <div class="w-full bg-slate-100 h-4 rounded-full overflow-hidden">
-                            <div class="bg-slate-900 h-full w-[60%]"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-3 font-bold uppercase text-sm tracking-widest text-slate-500">
-                            <span>Reading</span>
-                        </div>
-                        <div class="w-full bg-slate-100 h-4 rounded-full overflow-hidden">
-                            <div class="bg-slate-900 h-full w-[80%]"></div>
+                        <div>
+                            <div class="flex justify-between mb-3 font-bold uppercase text-sm tracking-widest text-slate-500">
+                                <span>Reading</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-4 rounded-full overflow-hidden shadow-inner">
+                                <div class="progress-fill h-full bg-[#4ade80]" data-width="80%"></div>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="flex justify-between mb-3 font-bold uppercase text-sm tracking-widest text-slate-500">
-                            <span>Writing</span>
+
+                    <div class="space-y-10">
+                        <div>
+                            <div class="flex justify-between mb-3 font-bold uppercase text-sm tracking-widest text-slate-500">
+                                <span>Speaking</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-4 rounded-full overflow-hidden shadow-inner">
+                                <div class="progress-fill h-full bg-[#a3e635]" data-width="60%"></div>
+                            </div>
                         </div>
-                        <div class="w-full bg-slate-100 h-4 rounded-full overflow-hidden">
-                            <div class="bg-slate-900 h-full w-[70%]"></div>
+                        <div>
+                            <div class="flex justify-between mb-3 font-bold uppercase text-sm tracking-widest text-slate-500">
+                                <span>Writing</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-4 rounded-full overflow-hidden shadow-inner">
+                                <div class="progress-fill h-full bg-[#34d399]" data-width="70%"></div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -413,6 +429,12 @@
                 var revealPoint = 100; 
                 if (revealTop < windowHeight - revealPoint) {
                     reveals[i].classList.add('active');
+                    
+                    // Kích hoạt hiệu ứng thanh Progress Bar
+                    var progressBars = reveals[i].querySelectorAll('.progress-fill');
+                    progressBars.forEach(bar => {
+                        bar.style.width = bar.getAttribute('data-width');
+                    });
                 }
             }
         }
